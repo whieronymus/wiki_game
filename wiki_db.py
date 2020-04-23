@@ -1,4 +1,3 @@
-import os
 from sqlalchemy import Column, ForeignKey, Integer, String, Table, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref, sessionmaker
@@ -12,7 +11,6 @@ Base = declarative_base()
 engine = create_engine('sqlite:///sql.db',
                        connect_args={'check_same_thread': False},
                        echo=False)
-
 
 page_link = Table(
     'page_link',
